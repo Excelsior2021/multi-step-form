@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 @font-face {
   font-family: "Ubuntu-Regular";
   src: url("../../src/assets/fonts/Ubuntu-Regular.ttf");
@@ -28,4 +30,5 @@ html {
 body {
   font-family: "Ubuntu-Regular";
   font-size: 1.6rem;
+  background-color: $magnolia;
 }

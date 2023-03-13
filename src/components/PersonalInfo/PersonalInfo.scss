@@ -1,0 +1,35 @@
+@use "../../partials/variables" as *;
+@use "../../partials/mixins" as *;
+
+.personal-info {
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    color: $marine-blue;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+
+    @include media-desktop {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__input {
+    font-family: "Ubuntu-Medium";
+    font-size: 1.5rem;
+    color: $cool-gray;
+    height: 40px;
+    border: 1px solid $light-gray;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    padding: 0 16px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

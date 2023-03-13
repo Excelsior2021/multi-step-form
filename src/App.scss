@@ -1,0 +1,21 @@
+@use "./partials//mixins" as *;
+
+.app {
+  &__navbar {
+    &--mobile {
+      @include media-desktop {
+        display: none;
+      }
+    }
+    &--desktop {
+      display: none;
+      @include media-desktop {
+        display: block;
+      }
+    }
+  }
+}
+
+.main {
+  padding: 0 16px;
+}
