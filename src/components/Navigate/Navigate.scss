@@ -36,14 +36,38 @@
       background-color: transparent;
       color: $cool-gray;
       border: none;
+
+      &:hover {
+        color: $marine-blue;
+      }
     }
 
-    &--next {
+    &--next,
+    &--confirm {
       color: $white;
-      background-color: $marine-blue;
       border: none;
       padding: 1rem;
       margin-left: auto;
+
+      @include media-desktop {
+        padding: 1rem 2rem;
+      }
+    }
+
+    &--next {
+      background-color: $marine-blue;
+
+      &:hover {
+        background-color: #164a8a;
+      }
+    }
+
+    &--confirm {
+      background-color: $purplish-blue;
+
+      &:hover {
+        background-color: #928cff;
+      }
     }
   }
 }

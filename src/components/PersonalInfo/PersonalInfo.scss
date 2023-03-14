@@ -21,7 +21,7 @@
   &__input {
     font-family: "Ubuntu-Medium";
     font-size: 1.5rem;
-    color: $cool-gray;
+    color: $marine-blue;
     height: 40px;
     border: 1px solid $light-gray;
     border-radius: 4px;
@@ -30,6 +30,11 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $purplish-blue;
     }
   }
 }

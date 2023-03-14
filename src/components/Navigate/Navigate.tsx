@@ -1,6 +1,8 @@
-import { Component } from "solid-js"
+import { Component, createSignal } from "solid-js"
 import { setStepState, stepState } from "../../App"
 import "./Navigate.scss"
+
+export const [confirm, setConfirm] = createSignal(false)
 
 const Navigate: Component = () => (
   <div class="navigate">
@@ -19,7 +21,9 @@ const Navigate: Component = () => (
       </button>
     )}
     {stepState() === 4 && (
-      <button class="navigate__button navigate__button--confirm">
+      <button
+        class="navigate__button navigate__button--confirm"
+        onclick={() => setConfirm(true)}>
         confirm
       </button>
     )}

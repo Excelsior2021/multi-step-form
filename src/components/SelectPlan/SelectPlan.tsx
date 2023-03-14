@@ -53,6 +53,7 @@ const SelectPlan: Component = () => {
           <input
             class="switch__input"
             type="checkbox"
+            checked={!monthlyRate()}
             onclick={() => setMonthlyRate(prevState => !prevState)}
           />
           <span class="switch__slider switch__round"></span>

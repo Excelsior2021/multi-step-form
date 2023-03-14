@@ -1,11 +1,13 @@
 import { Component, Match, Switch } from "solid-js"
 import { stepState } from "../../App"
+import { confirm } from "../Navigate/Navigate"
 import FinishUp from "../FinishUp/FinishUp"
 import Navigate from "../Navigate/Navigate"
 import PersonalInfo from "../PersonalInfo/PersonalInfo"
 import PickAddOns from "../PickAddOns/PickAddOns"
 import SelectPlan from "../SelectPlan/SelectPlan"
 import Navbar from "../Navbar/Navbar"
+import Confirmation from "../Confirmation/Confirmation"
 import "./Wrapper.scss"
 
 const Wrapper: Component = () => (
@@ -24,11 +26,14 @@ const Wrapper: Component = () => (
         <Match when={stepState() === 3}>
           <PickAddOns />
         </Match>
-        <Match when={stepState() === 4}>
+        <Match when={stepState() === 4 && !confirm()}>
           <FinishUp />
         </Match>
+        <Match when={stepState() === 4 && confirm()}>
+          <Confirmation />
+        </Match>
       </Switch>
-      <Navigate />
+      {(!confirm() || stepState() !== 4) && <Navigate />}
     </div>
   </div>
 )
