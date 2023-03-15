@@ -15,12 +15,16 @@ const PersonalInfo: Component = () => (
       </label>
       <input
         class="personal-info__input"
+        id="name"
         name="name"
         type="text"
         value={state.userInfo.name}
         placeholder="e.g. Stephen King"
         onchange={e =>
-          setState("userInfo", { ...state.userInfo, name: e.target.value })
+          setState("userInfo", {
+            ...state.userInfo,
+            name: e.currentTarget.value,
+          })
         }
       />
       <label class="personal-info__label" for="email">
@@ -28,12 +32,16 @@ const PersonalInfo: Component = () => (
       </label>
       <input
         class="personal-info__input"
+        id="email"
         name="email"
         type="text"
         value={state.userInfo.email}
         placeholder="e.g. stephenking@lorem.com"
         onchange={e =>
-          setState("userInfo", { ...state.userInfo, email: e.target.value })
+          setState("userInfo", {
+            ...state.userInfo,
+            email: e.currentTarget.value,
+          })
         }
       />
       <label class="personal-info__label" for="phone">
@@ -41,12 +49,16 @@ const PersonalInfo: Component = () => (
       </label>
       <input
         class="personal-info__input"
+        id="phone"
         name="phone"
         type="text"
         value={state.userInfo.phone}
         placeholder="e.g. +1 234 567 890"
         onchange={e =>
-          setState("userInfo", { ...state.userInfo, phone: e.target.value })
+          setState("userInfo", {
+            ...state.userInfo,
+            phone: e.currentTarget.value,
+          })
         }
       />
     </form>
