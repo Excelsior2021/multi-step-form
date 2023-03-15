@@ -17,11 +17,12 @@
 }
 
 .main {
+  padding: 0 16px;
+
   @include media-desktop {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: fit-content;
-    height: 100vh;
+    min-height: 100vh;
   }
 }

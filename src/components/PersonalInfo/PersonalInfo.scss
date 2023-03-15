@@ -15,6 +15,7 @@
 
     @include media-desktop {
       font-size: 1.4rem;
+      margin-bottom: 8px;
     }
   }
 
@@ -27,6 +28,10 @@
     border-radius: 4px;
     margin-bottom: 16px;
     padding: 0 16px;
+
+    @include media-desktop {
+      height: 48px;
+    }
 
     &:last-child {
       margin-bottom: 0;
